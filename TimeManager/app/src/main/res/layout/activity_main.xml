@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main_container">
+
+    <fragment
+        android:id="@+id/fragment_TimeStatistics"
+        android:name="com.txl.time_manager.time.statistics.TimeStatisticsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/radio_group"/>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/colorAccent">
+        <RadioButton
+            android:id="@+id/rb_time_statistics"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/time_statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_statistics" />
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/icons_time_statistics"
+            android:id="@+id/rb_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待定" />
+        <RadioButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:background="@null"
+            android:button="@null"
+            android:id="@+id/rb_message"
+            android:drawableTop="@drawable/icons_time_statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待定"/>
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

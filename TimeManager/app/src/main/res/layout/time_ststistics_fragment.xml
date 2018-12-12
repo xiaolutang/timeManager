@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_tool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_52dp"
+            android:background="@color/solar_background">
+
+            <TextView
+                android:id="@+id/tv_month_day"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_16dp"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_26sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_month_day"
+                android:layout_toEndOf="@+id/tv_month_day"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen_12dp"
+                android:paddingLeft="@dimen/dimen_6dp"
+                android:paddingRight="@dimen/dimen_6dp"
+                android:paddingTop="@dimen/dimen_12dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_10sp" />
+
+                <TextView
+                    android:id="@+id/tv_lunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_10sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_current"
+                android:layout_width="@dimen/dimen_32dp"
+                android:layout_height="@dimen/dimen_32dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:background="@drawable/bg_ripple">
+
+                <ImageView
+                    android:id="@+id/ib_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_calendar"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv_current_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_2dp"
+                    android:gravity="center"
+                    android:text="13"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_12sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <com.haibin.calendarview.CalendarLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/solar_background"
+            android:orientation="vertical"
+            app:calendar_content_view_id="@+id/recyclerView">
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/solar_background"
+                app:current_day_lunar_text_color="#ff0000"
+                app:current_day_text_color="#ff0000"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:lunar_text_size="10sp"
+                app:max_year="2025"
+                app:min_year="2015"
+                app:month_view="com.txl.time_manager.widget.calendar.custom.CustomMonthView"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_lunar_text_color="#FFFFFF"
+                app:other_month_text_color="#FFFFFF"
+                app:scheme_text="假"
+                app:scheme_text_color="#3efefe"
+                app:scheme_theme_color="#FFFFFF"
+                app:selected_lunar_text_color="#37f0ffff"
+                app:selected_text_color="@color/solar_background"
+                app:selected_theme_color="#75000F00"
+                app:week_background="@color/solar_background"
+                app:week_bar_view="com.txl.time_manager.widget.calendar.custom.CustomWeekBar"
+                app:week_text_color="#FFFFFF"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="@dimen/dimen_9sp"
+                app:year_view_month_text_color="#ff0000"
+                app:year_view_month_text_size="@dimen/dimen_20sp"
+                app:year_view_scheme_color="#f17706" />
+
+            <com.txl.time_manager.widget.calendar.group.GroupRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/content_background"
+                app:group_background="@color/content_background"
+                app:group_center="false"
+                app:group_has_header="false"
+                app:group_height="@dimen/dimen_42dp"
+                app:group_padding_left="@dimen/dimen_16dp"
+                app:group_padding_right="@dimen/dimen_16dp"
+                app:group_text_color="#555555"
+                app:group_text_size="@dimen/dimen_14sp" />
+
+        </com.haibin.calendarview.CalendarLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_add_task"
+        android:layout_gravity="end|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffff00"
+        android:src="@drawable/ic_add"
+        android:layout_marginBottom="@dimen/dimen_52dp"/>
+</FrameLayout>
