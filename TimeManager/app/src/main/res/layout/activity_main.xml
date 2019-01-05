@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/fragment_TimeStatistics"
-        android:name="com.txl.time_manager.time.statistics.TimeStatisticsFragment"
+        android:name="com.txl.timemanager.time.statistics.TimeStatisticsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintLeft_toLeftOf="parent"
