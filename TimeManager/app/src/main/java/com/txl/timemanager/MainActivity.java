@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RadioGroup;
 
+import com.txl.time_manager.R;
 import com.txl.timemanager.base.BaseActivity;
 import com.txl.timemanager.time.statistics.TimeStatisticsFragment;
 

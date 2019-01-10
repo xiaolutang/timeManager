@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import com.txl.time_manager.R;
 import com.txl.timemanager.base.BaseActivity;
 import com.txl.timemanager.data.WorkData;
 

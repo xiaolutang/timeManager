@@ -14,8 +14,8 @@ import android.widget.TextView;
 import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarLayout;
 import com.haibin.calendarview.CalendarView;
+import com.txl.time_manager.R;
 import com.txl.timemanager.base.BaseFragment;
-import com.txl.timemanager.R;
 import com.txl.timemanager.widget.calendar.group.GroupRecyclerView;
 
 /**

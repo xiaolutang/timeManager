@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 
-import com.txl.timemanager.R;
+import com.txl.time_manager.R;
 
 
 /**
@@ -32,7 +32,7 @@ public class GroupRecyclerView extends RecyclerView {
     public GroupRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.GroupRecyclerView);
-        mTextSize = array.getDimensionPixelSize(R.styleable.GroupRecyclerView_group_text_size, 16);
+        mTextSize = array.getDimensionPixelSize( R.styleable.GroupRecyclerView_group_text_size, 16);
         mGroupHeight = (int) array.getDimension(R.styleable.GroupRecyclerView_group_height, 52);
         mChildItemOffset = (int) array.getDimension(R.styleable.GroupRecyclerView_group_child_offset, 20);
         mTextColor = array.getColor(R.styleable.GroupRecyclerView_group_text_color, 0xFFFFFFFF);

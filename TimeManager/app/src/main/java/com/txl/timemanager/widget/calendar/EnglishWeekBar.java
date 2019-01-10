@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.WeekBar;
-import com.txl.timemanager.R;
+import com.txl.time_manager.R;
 
 /**
  * 自定义英文栏

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.txl.timemanager.SplashActivity">
     <com.txl.timemanager.widget.MiSportView
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>
